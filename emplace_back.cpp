@@ -83,6 +83,7 @@ public:
 		return *this;
 	}
 
+	//引用折叠 同时匹配左值引用和右值引用
 	template<typename Type>
 	void push_back(Type&& val) // 向容器末尾添加元素
 	{
@@ -93,6 +94,7 @@ public:
 		//std::cout << "push_back(Type&& val)" << std::endl;
 	}
 
+	//引用折叠 同时匹配左值引用和右值引用
 	template<typename... Types>
 	void emplace_back(Types&&... args) // 向容器末尾添加元素
 	{
